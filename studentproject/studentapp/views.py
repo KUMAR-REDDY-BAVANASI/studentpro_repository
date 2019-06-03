@@ -22,8 +22,10 @@ def Student_View(request):
             a.save()
             sform=StudentForm()
             return render(request,'studentdata.html',{'abcd':sform})
-
-        pass
+         else:
+              return HttpResponse("User Invalid Data")
+        
     else:
         sform=StudentForm()
         return render(request,'studentdata.html',{'abcd':sform})
+   
